@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const baseUrl = "https://cat-fact.herokuapp.com";
-const axiosInstance = axios.create({
+export const axiosInstance = axios.create({
   baseURL: baseUrl,
 });
 

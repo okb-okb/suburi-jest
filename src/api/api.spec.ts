@@ -1,12 +1,11 @@
 /* eslint-disable jest/no-mocks-import */
-import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
 
-import { getCatFact } from "./api";
+import { axiosInstance, getCatFact } from "./api";
 import factData from "./__mocks__/fact.json";
 
 describe("test cat-facts", () => {
-  const mock = new MockAdapter(axios);
+  const mock = new MockAdapter(axiosInstance);
 
   // 使用毎にモック内のデータをクリア
   afterEach(() => {
